@@ -1,0 +1,212 @@
+/* root code  */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+.main-content {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: calc(100% - 48px);
+}
+:root {
+  --font-heading: "Sen", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.h1-content {
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.46; /* 145.833% */
+}
+.p-content {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.67; /* 166.667% */
+}
+.h3-content {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+}
+.btn {
+  text-align: center;
+  width: 200px;
+  display: inline-block;
+  /* để chỉnh độ rộng  */
+
+  line-height: 56px;
+  background-color: #62d0b6;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+  border: 1px solid #62d0b6;
+}
+/* -----------body----------- */
+
+/* ----------header---------- */
+.header {
+  padding-bottom: 8px;
+  height: 94px;
+  background: #fff;
+}
+.header.fixed {
+  position: sticky;
+  top: -36px;
+  z-index: 1;
+}
+.header .body-header {
+  height: 95px;
+  padding: 23px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body-header .nav ul {
+  display: flex;
+}
+.logo-header {
+  width: 160px;
+  object-fit: cover;
+}
+.nav a {
+  color: black;
+  font-weight: 800px;
+  padding: 8px 24px;
+
+  text-align: center;
+  position: relative;
+}
+.nav .nav-home::after {
+  position: absolute;
+  bottom: 7px;
+  left: 23px;
+  content: "";
+  display: block;
+  border-radius: 1px;
+  background-color: black;
+  width: 12px;
+  height: 2px;
+}
+.nav .nav-home,
+.nav a:hover {
+  color: #171100;
+  text-align: center;
+  text-shadow: 1px 0 0 currentColor;
+}
+.body-header .icon-header li {
+  padding: 0 15px;
+}
+.body-header .icon-header .icon-h {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------main---------- */
+/* banner  */
+.hero .banner-top {
+  margin-top: 25px;
+  width: 100%;
+  height: 558px;
+  background-image: url(../image/Banner.png);
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.banner-top .content-banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 136px 0;
+}
+.content-banner-top .center-banner {
+  width: 888px;
+  text-align: center;
+}
+.banner-top .content-banner-top .h1-content {
+  margin-bottom: 16px;
+}
+.banner-top .btn.btn-center-banner {
+  margin-top: 30px;
+}
+.banner-top .btn.btn-center-banner:hover {
+  opacity: 0.7;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
+}
+.content-banner-top .buttom {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.content-banner-top .buttom:hover {
+  opacity: 0.6;
+}
+.banner-top .content-banner-top .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 163px;
+}
+.banner-top .dots .dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: transparent;
+
+  border: 2px solid #fff;
+}
+.banner-top .dots .dot.premium {
+  width: 37px;
+  border-radius: 10px;
+  background-color: #62d0b6;
+  border: 2px solid #62d0b6;
+}
+.main-body .first-oder {
+  width: 100%;
+  height: 123px;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  justify-content: space-between;
+}
+.main-body .first-oder .first-oder-content {
+  width: 32.5%;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+}
+.main-body .first-oder .first-oder-content:hover {
+  opacity: 0.8;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
+  transition: 0.2s;
+}
+.main-body .first-oder-content .content-oder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 34px;
+  height: 100%;
+  max-width: 100%;
+}
+.main-body .content-oder img {
+  margin-right: 16px;
+}
+.main-body .content-oder .h3-content {
+  margin-bottom: 4px;
+}
