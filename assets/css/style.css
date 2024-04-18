@@ -66,6 +66,48 @@ a {
   border-radius: 4px;
   border: 1px solid #62d0b6;
 }
+.status {
+  color: #62d0b6;
+  font-size: 1.4rem;
+}
+.status.pre {
+  color: #f55157;
+  font-family: "Lexend", sans-serif;
+  font-size: 1.4rem;
+}
+.giasale {
+  font-size: "Lexend", sans-serif;
+  color: #f55157;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.39; /* 138.889% */
+}
+.giagoc {
+  color: #a5a5a5;
+  margin-left: 5px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.71; /* 171.429% */
+  text-decoration-line: line-through;
+}
+.tra_gop {
+  color: #666;
+}
+.add-text {
+  color: #333;
+  font-family: "Lexend", sans-serif;
+}
+.name-dv {
+  padding: 5px 0;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.mini-text {
+  color: #666;
+  line-height: 1.56;
+  font-family: "Lexend", sans-serif;
+}
 /* -----------body----------- */
 
 /* ----------header---------- */
@@ -158,12 +200,14 @@ a {
 .banner-top .btn.btn-center-banner {
   margin-top: 30px;
 }
+/* nút banner chính  */
 .banner-top .btn.btn-center-banner:hover {
   opacity: 0.9;
   transform: scale(1.1);
   transition: 0.4s;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.08);
 }
+/* nút 2 bên banner chính  */
 .content-banner-top .buttom {
   width: 60px;
   height: 60px;
@@ -206,18 +250,20 @@ a {
   margin-top: 24px;
   justify-content: space-between;
 }
+/* thẻ gồm 3 mục đầu trang 1  */
 .main-body .first-oder .first-oder-content {
   width: 32.5%;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   border: 1px solid #e2dfda;
 }
-.first-photo-banner .box-photo-banner:hover,
+
 .main-body .first-oder .first-oder-content:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
   transition: 0.2s;
 }
+/* nội dung 3 mục đầu trang 1  */
 .main-body .first-oder-content .content-oder {
   display: flex;
   justify-content: center;
@@ -233,6 +279,7 @@ a {
   margin-bottom: 4px;
 }
 /* firts photo  */
+/* xoay ngang 2 ảnh banner lớn trang 1 */
 .main-body .first-photo-banner {
   width: 100%;
   display: flex;
@@ -252,22 +299,31 @@ a {
   background-image: url(../image/apple_air.jpg);
   background-position: center;
 }
+/* thẻ bọc các chữ trong 2 banner  */
 .box-photo-banner .content-photo-banner {
   padding: 54px 0 54px 24px;
   width: 236px;
 }
+/* tên máy trong 2 banner lớn  */
 .box-photo-banner .content-photo-banner .p-content.namedv {
   color: #333;
   font-weight: 450;
+  padding: 20px 20px 0 0;
+}
+.box-photo-banner .content-photo-banner .p-content.namedv:hover {
+  text-shadow: 1px 0 0 currentColor;
+  transition: all 0.3s ease;
 }
 .first-photo-banner .box-photo-banner:hover {
   /* thay đổi độ rộng cao của ảnh  */
+  opacity: 0.9;
   transform: scale(1.1);
   /* áp dụng tất cả các cạnh của vật, nhanh-chậm dần 0.3s */
   transition: all 0.3s ease;
 }
 
 /* shopping  */
+/* dòng chữ trên đầu các sp  */
 .n2nd-main .top-n2nd-main {
   display: flex;
   align-items: center;
@@ -275,11 +331,13 @@ a {
   padding: 16px 0;
   margin-top: 96px;
 }
+/* xoay ngang nút và chữ bên phải  */
 .n2nd-main .top-n2nd-main .btn_and_text-right {
   display: flex;
   align-items: center;
   padding: 15px 5px 15px 15px;
 }
+/* nút tất cả bên phải  */
 .top-n2nd-main .btn_and_text-right .btn-right {
   background-color: transparent;
   border: none;
@@ -287,28 +345,135 @@ a {
   padding: 7px;
   cursor: pointer;
 }
+
 .n2nd-main .top-n2nd-main .btn_and_text-right:hover {
   transform: translateY(-5px) scale(1.1);
   transition: all 0.3s ease;
 }
+/* thẻ bọc toàn bộ các sp  */
 .n2nd-main .store-main {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  padding: 16px 0;
 }
+/* thẻ bọc sản phẩm  */
 .n2nd-main .store-main .main-item {
   width: 282px;
+  padding: 16px;
+  border: 1px solid #e2dfda;
+  border-radius: 12px;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
 }
-.n2nd-main .store-main .main-item img {
+.n2nd-main .store-main .main-item .box-photo-store {
   width: 100%;
 }
-.store-main .foot_item img {
-  width: 50px;
-  height: 50px;
+/* ảnh sp  */
+.n2nd-main .store-main .main-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
-.store-main .foot_item .add {
+/* giá  */
+.store-main .main-item .money {
+  margin-top: 4px;
+}
+/* thêm vào giỏ*/
+.store-main .main-item .foot_item {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e2dfda;
+  padding: 15px 40px;
+  margin-top: 16px;
+  border-radius: 10px;
+  gap: 5px;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
-.store-main .foot_item .add img {
+/* icon store  */
+.store-main .main-item .foot_item img {
   width: 16px;
   height: 16px;
+}
+/* hover sản phẩm 1  */
+.n2nd-main .store-main .main-item:hover {
+  opacity: 0.9;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+.store-main .main-item .foot_item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
+  transform: translateY(-5px) scale(1.1);
+  transition: all 0.3s ease;
+  background-color: #62d0b6;
+}
+/* banner dài 2 */
+.main-body .banner_n2 {
+  background-image: url(../image/banner-2.png);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  margin: 56px 0 0 0;
+}
+/* group icon mini 6 cái  */
+.main-body .group_mini_photo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* chỉnh 6 icon  */
+.main-body .group_mini_photo .content-group img {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+}
+/* hover 6 icon  */
+.main-body .group_mini_photo .content-group a :hover {
+  opacity: 0.9;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
+  transform: translateY(-5px) scale(1.1);
+  transition: all 0.3s ease;
+}
+/* chữ nhỏ dưới 6 icon  */
+.main-body .group_mini_photo .content-group {
+  text-align: center;
+  margin-top: 16px;
+}
+/* chữ lớn ngay trên chữ nhỏ  */
+.main-body .group_mini_photo .content-group .name-dv {
+  padding: 16px 0 4px 0;
+}
+.first-photo-banner.n3photo {
+  gap: 10px;
+}
+.first-photo-banner.n3photo .box-photo-banner {
+  width: calc(33.33% - 10px);
+}
+.box-photo-banner.anh1 {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../image/gamepad.jpg);
+}
+.box-photo-banner.anh2 {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../image/tainghe_banner.jpg);
+}
+.box-photo-banner.anh3 {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../image/troly.jpg);
+}
+.content-photo-banner.lan2 {
+  text-align: end;
+  padding: 54px 24px;
+  width: 340px;
+  margin-right: 20px;
+}
+.content-photo-banner.lan2 .p-content.lan2,
+.content-photo-banner.lan2 .p-content.lan2 {
+  color: #ffffff;
 }
