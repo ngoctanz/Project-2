@@ -20,27 +20,42 @@ a {
 }
 .h1-content {
   color: #ffffff;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   text-align: center;
   font-size: 4.5rem;
   font-weight: 700;
   line-height: 1.46; /* 145.833% */
 }
 .p-content {
-  color: #5f5b53;
+  color: #84817a;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.67; /* 166.667% */
 }
+.h2-content {
+  font-family: var(--font-heading);
+  color: #333;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.39; /* 138.889% */
+}
 .h3-content {
   color: #333;
-  font-size: 2rem;
+  font-family: "Lexend", sans-serif;
+  font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.5; /* 150% */
 }
+.text-right {
+  color: #333;
+  font-family: "Lexend", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 450;
+  line-height: 1.67;
+}
 .btn {
   text-align: center;
-  width: 200px;
+  width: 180px;
   display: inline-block;
   /* để chỉnh độ rộng  */
 
@@ -82,9 +97,10 @@ a {
   color: black;
   font-weight: 800px;
   padding: 8px 24px;
-
   text-align: center;
   position: relative;
+  font-size: 1.8rem;
+  gap: 10px;
 }
 .nav .nav-home::after {
   position: absolute;
@@ -111,6 +127,9 @@ a {
   justify-content: center;
   align-items: center;
 }
+.body-header .icon-header .icon-h a:hover {
+  opacity: 0.6;
+}
 
 /* ----------main---------- */
 /* banner  */
@@ -118,7 +137,7 @@ a {
   margin-top: 25px;
   width: 100%;
   height: 558px;
-  background-image: url(../image/Banner.png);
+  background: url(../image/banner.jpg);
   background-size: cover;
   background-position: bottom center;
 }
@@ -140,8 +159,10 @@ a {
   margin-top: 30px;
 }
 .banner-top .btn.btn-center-banner:hover {
-  opacity: 0.7;
-  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
+  opacity: 0.9;
+  transform: scale(1.1);
+  transition: 0.4s;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.08);
 }
 .content-banner-top .buttom {
   width: 60px;
@@ -191,6 +212,7 @@ a {
   border-radius: 12px;
   border: 1px solid #e2dfda;
 }
+.first-photo-banner .box-photo-banner:hover,
 .main-body .first-oder .first-oder-content:hover {
   opacity: 0.8;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
@@ -209,4 +231,84 @@ a {
 }
 .main-body .content-oder .h3-content {
   margin-bottom: 4px;
+}
+/* firts photo  */
+.main-body .first-photo-banner {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+}
+.first-photo-banner .box-photo-banner {
+  width: 50%;
+  height: 245px;
+  background-image: url(../image/s24u.jpg);
+  background-size: cover;
+  background-position: right;
+  margin-top: 112px;
+  cursor: pointer;
+}
+.first-photo-banner .box-photo-banner.pt2 {
+  background-image: url(../image/apple_air.jpg);
+  background-position: center;
+}
+.box-photo-banner .content-photo-banner {
+  padding: 54px 0 54px 24px;
+  width: 236px;
+}
+.box-photo-banner .content-photo-banner .p-content.namedv {
+  color: #333;
+  font-weight: 450;
+}
+.first-photo-banner .box-photo-banner:hover {
+  /* thay đổi độ rộng cao của ảnh  */
+  transform: scale(1.1);
+  /* áp dụng tất cả các cạnh của vật, nhanh-chậm dần 0.3s */
+  transition: all 0.3s ease;
+}
+
+/* shopping  */
+.n2nd-main .top-n2nd-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  margin-top: 96px;
+}
+.n2nd-main .top-n2nd-main .btn_and_text-right {
+  display: flex;
+  align-items: center;
+  padding: 15px 5px 15px 15px;
+}
+.top-n2nd-main .btn_and_text-right .btn-right {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  padding: 7px;
+  cursor: pointer;
+}
+.n2nd-main .top-n2nd-main .btn_and_text-right:hover {
+  transform: translateY(-5px) scale(1.1);
+  transition: all 0.3s ease;
+}
+.n2nd-main .store-main {
+  display: flex;
+  justify-content: space-between;
+}
+.n2nd-main .store-main .main-item {
+  width: 282px;
+}
+.n2nd-main .store-main .main-item img {
+  width: 100%;
+}
+.store-main .foot_item img {
+  width: 50px;
+  height: 50px;
+}
+.store-main .foot_item .add {
+  display: flex;
+}
+.store-main .foot_item .add img {
+  width: 16px;
+  height: 16px;
 }
