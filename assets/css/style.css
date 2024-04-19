@@ -108,9 +108,18 @@ a {
   line-height: 1.56;
   font-family: "Lexend", sans-serif;
 }
+.p-content.xemngay {
+  font-family: "Lexend", sans-serif;
+  color: #ffffffc9;
+  text-shadow: 1px 0 0 currentColor;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 10px 0 10px 0;
+}
 /* -----------body----------- */
 
-/* ----------header---------- */
+/* ----------nav---------- */
 .header {
   padding-bottom: 8px;
   height: 94px;
@@ -155,7 +164,9 @@ a {
   width: 12px;
   height: 2px;
 }
+/* giữ hover thẻ home  */
 .nav .nav-home,
+/* hover nav  */
 .nav a:hover {
   color: #171100;
   text-align: center;
@@ -175,7 +186,7 @@ a {
 
 /* ----------main---------- */
 /* banner  */
-.hero .banner-top {
+.hero .full-body {
   margin-top: 25px;
   width: 100%;
   height: 558px;
@@ -184,7 +195,7 @@ a {
   background-position: bottom center;
 }
 
-.banner-top .content-banner-top {
+.full-body .content-banner-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -194,14 +205,16 @@ a {
   width: 888px;
   text-align: center;
 }
-.banner-top .content-banner-top .h1-content {
+.full-body .content-banner-top .h1-content {
   margin-bottom: 16px;
 }
-.banner-top .btn.btn-center-banner {
+.full-body .btn.btn-center-banner {
   margin-top: 30px;
+  /* áp dụng tất cả các cạnh của vật, nhanh-chậm dần 0.3s */
+  transition: all 0.3s ease;
 }
 /* nút banner chính  */
-.banner-top .btn.btn-center-banner:hover {
+.full-body .btn.btn-center-banner:hover {
   opacity: 0.9;
   transform: scale(1.1);
   transition: 0.4s;
@@ -218,17 +231,19 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.4 ease;
 }
 .content-banner-top .buttom:hover {
-  opacity: 0.6;
+  opacity: 0.8;
+  transform: scale(1.1);
 }
-.banner-top .content-banner-top .dots {
+.full-body .content-banner-top .dots {
   display: flex;
   gap: 6px;
   justify-content: center;
   margin-top: 163px;
 }
-.banner-top .dots .dot {
+.full-body .dots .dot {
   width: 11px;
   height: 11px;
   border-radius: 50%;
@@ -236,7 +251,7 @@ a {
 
   border: 2px solid #fff;
 }
-.banner-top .dots .dot.premium {
+.full-body .dots .dot.premium {
   width: 37px;
   border-radius: 10px;
   background-color: #62d0b6;
@@ -256,12 +271,12 @@ a {
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   border: 1px solid #e2dfda;
+  transition: all 0.3 ease;
 }
 
 .main-body .first-oder .first-oder-content:hover {
   opacity: 0.9;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
-  transition: 0.2s;
 }
 /* nội dung 3 mục đầu trang 1  */
 .main-body .first-oder-content .content-oder {
@@ -286,6 +301,7 @@ a {
   gap: 24px;
   margin-top: 40px;
 }
+
 .first-photo-banner .box-photo-banner {
   width: 50%;
   height: 245px;
@@ -293,7 +309,9 @@ a {
   background-size: cover;
   background-position: right;
   margin-top: 112px;
-  cursor: pointer;
+  /* cursor: pointer; */
+  /* áp dụng tất cả các cạnh của vật, nhanh-chậm dần 0.3s */
+  transition: all 0.3s ease;
 }
 .first-photo-banner .box-photo-banner.pt2 {
   background-image: url(../image/apple_air.jpg);
@@ -318,8 +336,6 @@ a {
   /* thay đổi độ rộng cao của ảnh  */
   opacity: 0.9;
   transform: scale(1.1);
-  /* áp dụng tất cả các cạnh của vật, nhanh-chậm dần 0.3s */
-  transition: all 0.3s ease;
 }
 
 /* shopping  */
@@ -336,6 +352,7 @@ a {
   display: flex;
   align-items: center;
   padding: 15px 5px 15px 15px;
+  transition: all 0.3s ease;
 }
 /* nút tất cả bên phải  */
 .top-n2nd-main .btn_and_text-right .btn-right {
@@ -348,7 +365,6 @@ a {
 
 .n2nd-main .top-n2nd-main .btn_and_text-right:hover {
   transform: translateY(-5px) scale(1.1);
-  transition: all 0.3s ease;
 }
 /* thẻ bọc toàn bộ các sp  */
 .n2nd-main .store-main {
@@ -364,6 +380,7 @@ a {
   border: 1px solid #e2dfda;
   border-radius: 12px;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 .n2nd-main .store-main .main-item .box-photo-store {
   width: 100%;
@@ -390,6 +407,8 @@ a {
   gap: 5px;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
   cursor: pointer;
+  /* delay khi hover đối tượng   */
+  transition: all 0.3s ease;
 }
 /* icon store  */
 .store-main .main-item .foot_item img {
@@ -401,12 +420,10 @@ a {
   opacity: 0.9;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
   transform: translateY(-10px);
-  transition: all 0.3s ease;
 }
 .store-main .main-item .foot_item:hover {
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
   transform: translateY(-5px) scale(1.1);
-  transition: all 0.3s ease;
   background-color: #62d0b6;
 }
 /* banner dài 2 */
@@ -417,7 +434,13 @@ a {
   background-size: cover;
   background-position: center;
   margin: 56px 0 0 0;
+  transition: all 0.3s ease;
 }
+.main-body .banner_n2:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
+  transform: translateY(-5px) scale(1.1);
+}
+
 /* group icon mini 6 cái  */
 .main-body .group_mini_photo {
   display: flex;
@@ -428,6 +451,7 @@ a {
 .main-body .group_mini_photo .content-group img {
   width: 135px;
   height: 135px;
+  transition: all 0.3s ease;
   border-radius: 50%;
 }
 /* hover 6 icon  */
@@ -435,7 +459,6 @@ a {
   opacity: 0.9;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
   transform: translateY(-5px) scale(1.1);
-  transition: all 0.3s ease;
 }
 /* chữ nhỏ dưới 6 icon  */
 .main-body .group_mini_photo .content-group {
@@ -446,34 +469,74 @@ a {
 .main-body .group_mini_photo .content-group .name-dv {
   padding: 16px 0 4px 0;
 }
-.first-photo-banner.n3photo {
-  gap: 10px;
+/* 3 ảnh phía dưới dãy icon nhỏ  */
+.new_layout_2 .n3photo {
+  display: flex;
+  width: 100%;
+  height: 230px;
+  justify-content: space-between;
+  padding: 24px 0;
+  margin-top: 65px;
 }
-.first-photo-banner.n3photo .box-photo-banner {
+/* box a chứa ảnh nền  */
+.n3photo .box-photo-3 {
+  transition: all 0.3s ease;
+  background-position: center;
+  background-size: cover;
   width: calc(33.33% - 10px);
-}
-.box-photo-banner.anh1 {
-  background-size: cover;
-  background-position: center;
-  background-image: url(../image/gamepad.jpg);
-}
-.box-photo-banner.anh2 {
-  background-size: cover;
-  background-position: center;
+  height: 100%;
   background-image: url(../image/tainghe_banner.jpg);
 }
-.box-photo-banner.anh3 {
-  background-size: cover;
-  background-position: center;
+.n3photo .box-photo-3.anh2 {
+  background-image: url(../image/gamepad.jpg);
+}
+.n3photo .box-photo-3.anh3 {
   background-image: url(../image/troly.jpg);
 }
-.content-photo-banner.lan2 {
-  text-align: end;
+.n3photo .box-photo-3 .box-text-3 {
   padding: 54px 24px;
-  width: 340px;
-  margin-right: 20px;
+  text-align: end;
 }
-.content-photo-banner.lan2 .p-content.lan2,
-.content-photo-banner.lan2 .p-content.lan2 {
+/* chỉnh màu conntent box  */
+.n3photo .box-photo-3 .box-text-3 .h2-content.lan2,
+.n3photo .box-photo-3 .box-text-3 .p-content.lan2 {
+  color: #e2dfda;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+.n3photo .box-photo-3:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+/* hover chữ xem ngay  */
+.n3photo .box-photo-3 .box-text-3 .p-content.xemngay:hover {
   color: #ffffff;
+  transform: translateY(-5px) scale(1.1);
+}
+/* banner dài thứ 3  */
+.main-body .banner_n3 {
+  width: 100%;
+  height: 300px;
+  background-image: url(../image/camera_banner.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+.banner_n3 .content_banner-3 {
+  padding: 72px 35px;
+}
+.banner_n3 .content_banner-3 .h2-content.banner-3 {
+  color: #e2dfda;
+  width: 500px;
+}
+.banner_n3 .content_banner-3 .p-content.banner-3 {
+  color: #a5a5a5;
+}
+.main-body .banner_n3:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+.banner_n3 .content_banner-3 .p-content.xemngay {
+  width: 15%;
+}
+.banner_n3 .content_banner-3 .p-content.xemngay:hover {
+  /* translate lên trên 5px sang phải 16px (ảnh hưởng bới độ rộng thẻ) ; */
+  transform: translateY(-5px) translateX(16px) scale(1.1);
 }
