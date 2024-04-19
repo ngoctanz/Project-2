@@ -358,9 +358,32 @@ a {
   padding: 7px;
   cursor: pointer;
 }
-
 .top-store-text .btn_and_text-right:hover {
   transform: translateY(-5px) scale(1.1);
+}
+/* 2 nút tròn bên phải ( nếu có ) */
+.button-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.c2-btn-right .button-flex .img-btn {
+  width: 20px;
+  height: 20px;
+}
+.btn-right {
+  background-color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #e2dfda;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.button-flex .btn-right:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
 }
 /* thẻ bọc toàn bộ các sp  */
 .store-main {
@@ -384,12 +407,12 @@ a {
 /* ảnh sp  */
 .store-main .main-item img {
   width: 100%;
-  height: auto;
+  height: 259px;
   object-fit: cover;
 }
 /* giá  */
 .store-main .main-item .money {
-  margin-top: 4px;
+  margin-top: 10px;
 }
 /* thêm vào giỏ*/
 .n3nd-main .sale-box .foot_item,
@@ -413,7 +436,7 @@ a {
   height: 16px;
 }
 /* hover sản phẩm 1  */
-.n2nd-main .store-main .main-item:hover {
+.store-main .main-item:hover {
   opacity: 0.9;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
   transform: translateY(-10px);
@@ -548,6 +571,7 @@ a {
 /* thẻ sale  */
 .n3nd-main .sale_sp .sale-box {
   width: 50%;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -555,6 +579,7 @@ a {
   border: 1px solid #e2dfda;
   border-radius: 12px;
   transition: all 0.3s ease;
+  background-color: #ffffff;
 }
 /* nội dung thẻ sale  */
 .n3nd-main .sale_sp .sale-box .text-sale-box {
@@ -603,8 +628,6 @@ a {
   align-items: center;
   background-color: #f8f8fa;
   margin: 16px 0 6px;
-  /* box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
-  border: 1px solid #e2dfda; */
 }
 .n3nd-main .sale_sp .countdown .time {
   display: flex;
