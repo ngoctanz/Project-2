@@ -77,9 +77,9 @@ a {
 }
 .giasale {
   font-size: "Lexend", sans-serif;
-  color: #f55157;
+  color: #f2252c;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 650;
   line-height: 1.39; /* 138.889% */
 }
 .giagoc {
@@ -92,9 +92,11 @@ a {
 }
 .tra_gop {
   color: #666;
-  padding-top: 4px;
+  padding: 4px 0 9px;
 }
 .add-text {
+  align-items: end;
+  margin-right: 0;
   color: #333;
   font-family: "Lexend", sans-serif;
 }
@@ -324,14 +326,15 @@ a {
   font-weight: 450;
   padding: 20px 20px 0 0;
 }
-.box-photo-banner .content-photo-banner .p-content.namedv:hover {
+
+.first-photo-banner .box-photo-banner:hover .p-content.namedv {
   text-shadow: 1px 0 0 currentColor;
   transition: all 0.3s ease;
 }
 .first-photo-banner .box-photo-banner:hover {
   /* thay đổi độ rộng cao của ảnh  */
   opacity: 0.9;
-  transform: scale(1.1);
+  transform: scale(1.08, 1.08);
 }
 
 /* shopping  */
@@ -393,14 +396,36 @@ a {
   padding: 16px 0;
 }
 /* thẻ bọc sản phẩm  */
-.store-main .main-item {
+/* relative thẻ sale off  */
+.box-sp {
+  position: relative;
+  transition: all 0.3s ease;
   width: 282px;
   padding: 16px;
   border: 1px solid #e2dfda;
   border-radius: 12px;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
 }
+
+.sale-off-top {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  z-index: 1;
+}
+.sale-off-top img {
+  width: 90px;
+  height: 40px;
+}
+.text-sale-off {
+  color: #f8f8fa;
+  font-weight: 600;
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 5px;
+}
+/* nội dung thẻ sản phẩm  */
 .store-main .main-item .box-photo-store {
   width: 100%;
 }
@@ -409,6 +434,7 @@ a {
   width: 100%;
   height: 259px;
   object-fit: cover;
+  padding: 20px 5px 5px;
 }
 /* giá  */
 .store-main .main-item .money {
@@ -434,9 +460,32 @@ a {
 .store-main .main-item .foot_item img {
   width: 16px;
   height: 16px;
+  padding: 0px;
 }
+.store-main .main-item .foot_item {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.box-sp.special .main-item img {
+  padding: 0;
+}
+/* chỉnh riêng box sale đặc biệt  */
+.main-sale {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2dfda;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
 /* hover sản phẩm 1  */
-.store-main .main-item:hover {
+.store-main .box-sp:hover {
   opacity: 0.9;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
   transform: translateY(-10px);
@@ -572,15 +621,10 @@ a {
 .n3nd-main .sale_sp .sale-box {
   width: 50%;
   height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2dfda;
-  border-radius: 12px;
   transition: all 0.3s ease;
-  background-color: #ffffff;
+  position: relative;
 }
+
 /* nội dung thẻ sale  */
 .n3nd-main .sale_sp .sale-box .text-sale-box {
   padding: 16px;
@@ -628,6 +672,7 @@ a {
   align-items: center;
   background-color: #f8f8fa;
   margin: 16px 0 6px;
+  font-weight: 600;
 }
 .n3nd-main .sale_sp .countdown .time {
   display: flex;
@@ -641,11 +686,43 @@ a {
   transform: translateY(-5px) scale(1.1);
   background-color: #62d0b6;
 }
-
+/* hover box ngoài cùng thẻ sale  */
 .n3nd-main .sale_sp .sale-box:hover {
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
-  transform: translateY(-5px) scale(1.1);
+  transform: translate(-15px);
+}
+/* chỉnh riêng hover sale  */
+.n3nd-main .sale_sp .sale-box.sale2:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.119);
+  transform: translateX(15px);
 }
 .text_on_coundown {
   padding: 16px;
+}
+.tragop_text-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  background: #62d0b6;
+  padding: 7px 5px;
+  font-size: 1.5rem;
+  border-radius: 0 0 0 4px;
+}
+/* chỉnh sale off riêng cho box sale  */
+.sale-off-top.long-sale img {
+  width: 128px;
+  height: 50px;
+}
+.text-sale-off.longsale {
+  margin: 4px 0 0 1px;
+}
+.tragop_text-top.longsale {
+  border: none;
+  color: #62d0b6;
+  background-color: transparent;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 10px 30px;
+  top: 10px;
 }
